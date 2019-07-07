@@ -2,12 +2,6 @@
 
 # An Introduction to MongoDB
 
-## Prerequisites
-
-- Basic JavaScript
-- [SQL NoSQL Discussion](https://git.generalassemb.ly/ga-wdi-boston/sql-nosql-discussion)
-- [MongoDB Study](https://git.generalassemb.ly/ga-wdi-boston/mongodb-study)
-
 ## Objectives
 
 By the end of this, developers should be able to:
@@ -18,8 +12,7 @@ By the end of this, developers should be able to:
 
 ## Preparation
 
-1. Fork and clone this repository.
-  [FAQ](https://git.generalassemb.ly/ga-wdi-boston/meta/wiki/ForkAndClone)
+1. Fork and clone this repository
 1. Create a new branch, `training`, for your work.
 1. Checkout to the `training` branch.
 1. Install dependencies with `npm install`.
@@ -42,6 +35,19 @@ What does this mean?
 | table                        | collection       |
 | row                          | document         |
 | column                       | field            |
+
+## Installation
+
+- Mac https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+```
+  brew install mongodb
+
+  brew services restart mongodb
+```
+
+- Ubuntu https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+  
+- Windows https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 
 ## Create a Database
 
@@ -139,7 +145,7 @@ something to remember.
 ### Demo: Bulk Load Books
 
 Watch as I load data in bulk from `data/books.csv`.  We'll save the
-command in `scripts/import/books.sh`.
+command in `practice-scripts/import/books.sh`.
 
 ```bash
 mongoimport --db=mongo-crud --collection=books --type=csv --headerline --file=data/books.csv
@@ -148,7 +154,7 @@ mongoimport --db=mongo-crud --collection=books --type=csv --headerline --file=da
 ### Code Along: Bulk Load People
 
 First, we'll load data in bulk from `data/people.csv`.  We'll save the
-command in `scripts/import/people.sh`.
+command in `practice-scripts/import/people.sh`.
 
 ```bash
 mongoimport --db=mongo-crud --collection=people --type=csv --headerline --file=data/people.csv
@@ -350,7 +356,7 @@ nick_name. Note that the attributes we choose for these people need not match
 those from the data we loaded in bulk.
 
 ```bash
-> load('scripts/insert/people.js');
+> load('practice-scripts/insert/people.js');
 ```
 
 ### Code along: Insert Doctors
